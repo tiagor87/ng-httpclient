@@ -1,0 +1,12 @@
+<ul class="list-group">
+    <ng-template [ngIf]="users.length" [ngIfElse]="noUsers">
+        <li class="list-group-item" *ngFor="let user of users">
+            {{user.name}}
+        </li>
+    </ng-template>
+    <ng-template #noUsers>
+        <li class="list-group-item">
+            No users to display
+        </li>
+    </ng-template>
+</ul>
